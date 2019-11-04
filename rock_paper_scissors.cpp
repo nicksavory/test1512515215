@@ -18,6 +18,8 @@ using namespace std;
 int main() {
 
   // declare vars
+  int select;
+  int game_count = 0;
   int user = 0;
   int counter = 0;
   int u_score = 0;
@@ -34,13 +36,22 @@ int main() {
   cout << "******************************************" << endl << endl;
 
   // question
-  cout << "How many games?";
-  cout << "Best out of 3";
-  cout << "Best out of 5";
-  cout << "Best out of 7";
+  cout << "How many games?" << endl;
+  cout << "1) Best out of 3" << endl;
+  cout << "2) Best out of 5" << endl;
+  cout << "3) Best out of 7" << endl << endl;
+  cin >> select;
 
+  if (select == 1) {
+    game_count = 3;
+  } else if (select == 2) {
+    game_count = 5;
+  } else if (select == 3) {
+    game_count = 7;
+  } else {
+    cout << select << " is invalid.";
+  }
 
-  // logic
   do {
 
     cout << "1. Rock" << endl;
@@ -120,7 +131,7 @@ int main() {
       break;
     }
 
-  } while (counter < 3);
+  } while (counter < game_count);
 
   if (u_score || c_score > 0) {
     cout << endl << endl << "FINAL SCORE" << endl;
