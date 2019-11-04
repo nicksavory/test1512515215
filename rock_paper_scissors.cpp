@@ -28,8 +28,8 @@ int main() {
 
   // intro ascii
   cout << endl << "******************************************" << endl;
-  cout << "**			v1.0			 	   " << endl;
-  cout << "**    Rock, Paper, Scissors, Lizard (v1.1), Spock (v1.1)   " << endl;
+  cout << "**			v1.2			 	   " << endl;
+  cout << "**    Rock, Paper, Scissors, Lizard (v1.2), Spock (v1.2)   " << endl;
   cout << "**    by: Nicholas Savory 11/04/2019		   " << endl;
   cout << "**								"
           "			   "
@@ -70,7 +70,7 @@ int main() {
     srand(time(NULL));
 
     // cpu guess
-    int cpu = rand() % 3 + 1;
+    int cpu = rand() % 5 + 1;
 
     // ask for user choice
     cout << endl << "[SCORE USER/CPU] : " << u_score << ":" << c_score << endl;
@@ -79,7 +79,7 @@ int main() {
 
     if (user == cpu) {
       cout << "It's a draw." << endl;
-    } else if (user > 3) {
+    } else if (user > 5) {
       cout << "Invalid entry." << endl;
       // user start
     } else if (user == 1 && cpu == 2) {
@@ -106,7 +106,6 @@ int main() {
       cout << "User wins this round!" << endl;
       counter++;
       u_score++;
-      // user end & cpu start
     } else if (user == 2 && cpu == 1) {
       cout << "User wins!" << endl;
       counter++;
@@ -131,8 +130,65 @@ int main() {
       cout << "Cpu wins this round!" << endl;
       counter++;
       c_score++;
-      // cpu end
-    } else {
+    } else if (user == 1 && cpu == 4) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+    } else if (user == 4 && cpu == 5) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+    } else if (user == 5 && cpu == 3) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+    } else if (user == 3 && cpu == 4) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+    } else if (user == 4 && cpu == 2) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+    } else if (user == 2 && cpu == 5) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+    } else if (user == 5 && cpu == 1) {
+      cout << "User wins this round!" << endl;
+      counter++;
+      u_score++;
+      // new v
+    } else if (user == 4 && cpu == 1) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } else if (user == 5 && cpu == 4) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } else if (user == 3 && cpu == 5) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } else if (user == 4 && cpu == 3) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } else if (user == 2 && cpu == 4) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } else if (user == 5 && cpu == 2) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } else if (user == 1 && cpu == 5) {
+      cout << "Cpu wins this round!" << endl;
+      counter++;
+      c_score++;
+    } 
+    else {
       cout << "Something went wrong!" << endl;
       break;
     }
