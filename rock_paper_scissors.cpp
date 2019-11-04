@@ -19,6 +19,7 @@ int main() {
 
   // declare vars
   int select;
+  int verified = 0;
   int game_count = 0;
   int user = 0;
   int counter = 0;
@@ -40,21 +41,26 @@ int main() {
   cout << "1) Best out of 3" << endl;
   cout << "2) Best out of 5" << endl;
   cout << "3) Best out of 7" << endl << endl;
-  cin >> select;
 
-  if (select == 1) {
-    game_count = 3;
-  } else if (select == 2) {
-    game_count = 5;
-  } else if (select == 3) {
-    game_count = 7;
-  } else {
-    cout << select << " is invalid.";
-  }
+  do {
+    cin >> select;
+    if (select == 1) {
+      game_count = 3;
+      verified++;
+    } else if (select == 2) {
+      game_count = 5;
+      verified++;
+    } else if (select == 3) {
+      game_count = 7;
+      verified++;
+    } else {
+      cout << select << " is invalid." << endl;
+    }
+  } while (verified = 0);
 
   do {
 
-    cout << "1. Rock" << endl;
+    cout << endl << "1. Rock" << endl;
     cout << "2. Paper" << endl;
     cout << "3. Scissors" << endl;
     cout << "4. Lizard" << endl;
